@@ -31,12 +31,11 @@ npm install
 ```
 
 ### 3. Configure environment variables
-Create a `.env` file in the root directory:
-```env
-MONGO_URI=mongodb://localhost:27017/startperks
-JWT_SECRET=your_super_secret_jwt_key_here
-PORT=5000
+Copy the example environment file and fill in your values:
+```bash
+cp .env.example .env
 ```
+Then edit `.env` with your MongoDB URI and JWT secret.
 
 ### 4. Start the server
 ```bash

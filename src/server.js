@@ -14,8 +14,14 @@ const claimRoutes = require('./routes/claimRoutes');
 // Initialize Express app
 const app = express();
 
+// CORS configuration - allows dynamic origin for production
+const corsOptions = {
+    origin: process.env.CLIENT_URL || 'http://localhost:3000',
+    credentials: true,
+};
+app.use(cors(corsOptions));
+
 // Middleware
-app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
